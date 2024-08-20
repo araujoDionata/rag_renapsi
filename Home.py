@@ -6,6 +6,7 @@ from utils import cria_chain_conversa, PASTA_ARQUIVOS
 
 
 def sidebar():
+    #st.logo('img/logo.png')
     uploaded_pdfs = st.file_uploader(
         'Adicione seus arquivos pdf', 
         type=['.pdf'], 
@@ -28,7 +29,7 @@ def sidebar():
             st.success('Inicializando o ChatBot...')
             cria_chain_conversa()
             st.rerun()
-    st.sidebar.image('img/logo.png', use_column_width=False, width=100)            
+    #st.sidebar.image('img/logo.png', use_column_width=False, width=100)            
 
 
 
