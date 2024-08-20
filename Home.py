@@ -31,7 +31,7 @@ def sidebar():
 
 
 def chat_window():
-    st.header('Bem-vindo ao Assistente da Demà Jovem', divider=True)
+    st.header('Bem-vindo ao Assistente da Demà Jovem by RENAPSI', divider=True)
 
     if not 'chain' in st.session_state:
         st.error('Faça o upload de PDFs para começar!')
