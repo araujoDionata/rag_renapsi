@@ -3,10 +3,8 @@ import time
 import streamlit as st
 
 from utils import cria_chain_conversa, PASTA_ARQUIVOS
-#from streamlit_extras.app_logo import add_logo
 
 st.logo('img/logo.png')
-#add_logo('img/logo.png', height=100)
 def sidebar():
     uploaded_pdfs = st.file_uploader(
         'Adicione seus arquivos pdf', 
@@ -30,7 +28,6 @@ def sidebar():
             st.success('Inicializando o ChatBot...')
             cria_chain_conversa()
             st.rerun()
-    #st.sidebar.image('img/logo.png', use_column_width=False, width=100) 
 
 
 def chat_window():
