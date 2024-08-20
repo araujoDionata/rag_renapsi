@@ -28,7 +28,7 @@ def sidebar():
             st.success('Inicializando o ChatBot...')
             cria_chain_conversa()
             st.rerun()
-st.sidebar.image('img/logo.png', use_column_width=False, width=100)            
+    st.sidebar.image('img/logo.png', use_column_width=False, width=100)            
 
 
 
