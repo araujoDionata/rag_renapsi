@@ -6,7 +6,6 @@ from utils import cria_chain_conversa, PASTA_ARQUIVOS
 
 
 def sidebar():
-    #st.sidebar.image('img/logo.png', use_column_width=False, width=100)
     uploaded_pdfs = st.file_uploader(
         'Adicione seus arquivos pdf', 
         type=['.pdf'], 
@@ -21,7 +20,7 @@ def sidebar():
     
     label_botao = 'Inicializar ChatBot'
     if 'chain' in st.session_state:
-        label_botao = 'Atualizar ChatBot'
+        label_botao = 'Atualizar Assitente'
     if st.button(label_botao, use_container_width=True):
         if len(list(PASTA_ARQUIVOS.glob('*.pdf'))) == 0:
             st.error('Adicione arquivos .pdf para inicializar o chatbot')
@@ -29,6 +28,8 @@ def sidebar():
             st.success('Inicializando o ChatBot...')
             cria_chain_conversa()
             st.rerun()
+st.sidebar.image('img/logo.png', use_column_width=False, width=100)            
+
 
 
 def chat_window():
